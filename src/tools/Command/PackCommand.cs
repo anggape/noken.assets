@@ -1,7 +1,6 @@
 using CliFx.Attributes;
 using Microsoft.Extensions.FileSystemGlobbing;
 using Microsoft.Extensions.FileSystemGlobbing.Abstractions;
-using Serilog;
 
 namespace Noken.Assets.Tools;
 
@@ -36,9 +35,10 @@ public sealed class PackCommand : Command
             .Execute(new DirectoryInfoWrapper(new(Directory.GetCurrentDirectory())))
             .Files.Select(x => x.Path);
         var files = includes.Where(x => !excludes.Contains(x)).ToArray();
-        var output = Output is not null ? Output : Config.Output;
+        var output = File.OpenWrite(Output is not null ? Output : Config.Output);
 
-        files.ToList().ForEach(Log.Information);
+        var writer = new Writer(output, files);
+        writer.Dispose();
 
         return new(0);
     }
