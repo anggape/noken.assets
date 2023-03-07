@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/read/Noken.Assets.Read.csproj" />
+    <ProjectReference Include="../../src/write/Noken.Assets.Write.csproj" />
+  </ItemGroup>
+
+</Project>

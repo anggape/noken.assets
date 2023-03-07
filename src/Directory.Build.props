@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup>
+    <SolutionDir Condition="$(SolutionDir) == ''">$(MSBuildThisFileDirectory)</SolutionDir>
+    <TargetFramework Condition="$(TargetFramework) == ''">net7.0</TargetFramework>
+    <NokenRoot>$(SolutionDir)../</NokenRoot>
+    <NokenArtifacts>$(NokenRoot)artifacts/</NokenArtifacts>
+    <BaseOutputPath>$(NokenArtifacts)bin/$(MSBuildProjectName)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(NokenArtifacts)obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+</Project>
