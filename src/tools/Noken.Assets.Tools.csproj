@@ -4,9 +4,16 @@
     <OutputType>Exe</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RunWorkingDirectory>$(NokenRoot)docs/sample</RunWorkingDirectory>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CliFx" Version="2.3.1" />
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <ProjectReference Include="../read/Noken.Assets.Read.csproj" />
     <ProjectReference Include="../write/Noken.Assets.Write.csproj" />
   </ItemGroup>

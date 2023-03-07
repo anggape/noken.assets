@@ -1,0 +1,7 @@
+{
+  "assets": {
+    "includes": ["**/*"],
+    "excludes": ["**/*.log", "**/*.noken"],
+    "output": "resources.noken"
+  }
+}
